@@ -1,3 +1,37 @@
+<?php
+require 'inc/koneksi.php';
+
+if (isset($_POST['submit'])) {
+
+    $nama = mysqli_real_escape_string($koneksi, $_POST['nama']);
+    $alamat = mysqli_real_escape_string($koneksi, $_POST['alamat']);
+    $no_ktp = mysqli_real_escape_string($koneksi, $_POST['no_ktp']);
+    $no_hp = mysqli_real_escape_string($koneksi, $_POST['no_hp']);
+    
+    // Query untuk insert data
+    $sql = "INSERT INTO tbl_wp (nama, alamat, no_ktp, no_hp) VALUES ('$nama', '$alamat', '$no_ktp', '$no_hp')";
+
+    if (mysqli_query($koneksi, $sql)) {
+        echo "
+            <script>
+                alert('data berhasil ditambahkan');
+                document.location.href = '?page=pemilik';
+            </script>
+        ";
+    } else {
+        echo "<script>
+                alert('data gagal ditambahkan');
+                document.location.href = '?page=pemilik';
+            </script>" . $sql . "<br>" . mysqli_error($koneksi);
+        "
+           
+        ";
+    }
+
+    mysqli_close($koneksi);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -55,31 +89,31 @@
                     <div class="mb-3 row">
                         <label for="nama" class="col-sm-2 col-form-label">Nama Pemilik</label>
                         <div class="col-sm-10">
-                        <input type="text" name="nama" class="form-control" id="nama" >
+                        <input type="text" name="nama" class="form-control" id="nama" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                        <input type="text" name="alamat" class="form-control" id="alamat">
+                        <input type="text" name="alamat" class="form-control" id="alamat" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_ktp" class="col-sm-2 col-form-label">No. Ktp</label>
                         <div class="col-sm-10">
-                        <input type="text" name="no_ktp" class="form-control" id="no_ktp">
+                        <input type="text" name="no_ktp" class="form-control" id="no_ktp" required>
                         </div>
                     </div>
                    <div class="mb-3 row">
                         <label for="no_hp" class="col-sm-2 col-form-label">No. HP</label>
                         <div class="col-sm-10">
-                        <input type="text" name="no_hp" class="form-control" id="no_hp" >
+                        <input type="text" name="no_hp" class="form-control" id="no_hp" required>
                         </div>
                     </div>
                 <div class="mb-3 row mt-4">
                     <div class="col">
                         <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
-                        <a href="view_pemilik.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                        <a href="?page=pemilik" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
                     </div>
                 </div>
             </form>
