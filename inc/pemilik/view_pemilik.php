@@ -49,7 +49,7 @@ require 'koneksi.php';
                <div class="full graph_head">
                   <div class="heading1 margin_0">
                      <h2>Tabel Daftar Wajib Pajak</h2>
-                     <a href="?page=karyawan&action=tambah" type="submit" class="btn btn-success mt-3"><i class="fa fa-pencil" aria-hidden="true"></i> Tambah</a>
+                     <a href="?page=view_pemilik&action=tambah" type="submit" class="btn btn-success mt-3"><i class="fa fa-pencil" aria-hidden="true"></i> Tambah</a>
                   </div>
                </div>
 
@@ -78,9 +78,8 @@ require 'koneksi.php';
                               <td><?php echo $data['alamat']; ?></td>
                               <td><?php echo $data['no_ktp']; ?></td>
                               <td><?php echo $data['no_hp']; ?></td>
-
-                              <td><a href="?page=view_pemilik&action=ubah&id_kar=<?php echo $data['id_wp']; ?>" type="submit" class="btn btn-sm     btn-primary" name="bubah"><i class="fa fa-edit"></i></a>
-                               <a onclick="return confirm('Yakin akan menghapus data ini?')" href="?page=view_pemilik&action=hapus&id_kar=<?php echo $data['id_wp'] ?>" type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
+                              <td><a href="?page=view_pemilik&action=ubah&id_wp=<?php echo $data['id_wp']; ?>" type="submit" class="btn btn-sm     btn-primary" name="bubah"><i class="fa fa-edit"></i></a>
+                               <a onclick="return confirm('Yakin akan menghapus data ini?')" href="?page=view_pemilik&action=hapus&id_wp=<?php echo $data['id_wp'] ?>" type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
 
                             </tr>
                             <?php
