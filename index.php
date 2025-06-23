@@ -61,11 +61,11 @@
                   </div>
                </div>
                <div class="sidebar_blog_2">
-                  <h4>General</h4>
+                  <h4>MENU UTAMA</h4>
                   <ul class="list-unstyled components">
                      <li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" ><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
-                        
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" >
+                        <i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
                      </li>
                      <li>
                         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>DATA</span></a>
