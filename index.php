@@ -142,9 +142,10 @@
                   if ($page == "kendaraan") {
                      if ($action == "") {
                         include "inc/kendaraan/form_kendaraan.php";
-                     } else if ($action == tambah) {
+                     } else if ($action == "tambah") {
                         include "inc/kendaraan/tambah_kendaraan.php";
                      }
+                     
                   } else if ($page == "pemilik") {
                      if ($action == "") {
                         include "inc/pemilik/view_pemilik.php";
