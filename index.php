@@ -207,7 +207,6 @@
 					      } else {
 					      	echo "404! Halaman tidak ditemukan";
 					      }
->>>>>>> 7bcfac6fd42eaba27ef68bf9687c50a7e36afa05
 
 
 					   ?>
