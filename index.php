@@ -179,9 +179,9 @@
 					      	 if ($action == "") {
 					      		include "inc/kendaraan/form_kendaraan.php";
 					      	} else if ($action == "tambah") {
-					   			include "inc/karyawan/tambah_kendaraan.php";
+					   			include "inc/kendaraan/tambah_kendaraan.php"";
 					      	} else if ($action == "ubah") {
-                           include "inc/karyawan/ubah_karyawan.php";
+                           include "inc/kendaraan/ubah_kendaraan.php";
                         }
 
 
