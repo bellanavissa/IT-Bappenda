@@ -116,7 +116,7 @@
                 <div class="mb-3 row mt-4">
                     <div class="col">
                         <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
-                        <a href="admin_pkb.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                        <a href="form_kendaraan.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
                     </div>
                 </div>
             </form>
