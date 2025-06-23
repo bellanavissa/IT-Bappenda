@@ -1,3 +1,7 @@
+<?php
+include "inc/koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -42,86 +46,94 @@
                 <p class="text-gray-600">Badan Pendapatan Daerah - BAPPENDA</p>
             </div>
 
-            <form action="" method="post" enctype="multipart/form-data">
-                <div class="mb-3 row">
-                    <label for="nopol" class="col-sm-2 col-form-label">Plat Nomor Kendaraan</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="nopol" class="form-control" id="nopol">
+            <div class="col-sm-4">
+                <!-- <form action="" method="post">
+                      <input type="text" name="keyword" size="38" autofocus placeholder="masukkan keyword pencarian.." autocomplete="off">
+                      <button type="submit" name="cari_spesifikasi_rumah">Cari</button>
+                      </form> -->
+
+            </div>
+            <div class="container">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="mb-3 row">
+                        <label for="nopol" class="col-sm-2 col-form-label">Plat Nomor Kendaraan</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nopol" class="form-control" id="nopol">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="merk" class="col-sm-2 col-form-label">Merk Kendaraan</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="merk" class="form-control" id="merk">
+                    <div class="mb-3 row">
+                        <label for="merk" class="col-sm-2 col-form-label">Merk Kendaraan</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="merk" class="form-control" id="merk">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="tipe" class="col-sm-2 col-form-label">Tipe Kendaraan</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="tipe" class="form-control" id="tipe">
+                    <div class="mb-3 row">
+                        <label for="tipe" class="col-sm-2 col-form-label">Tipe Kendaraan</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="tipe" class="form-control" id="tipe">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="silinder" class="col-sm-2 col-form-label">Silinder</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="silinder" class="form-control" id="silinder">
+                    <div class="mb-3 row">
+                        <label for="silinder" class="col-sm-2 col-form-label">Silinder</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="silinder" class="form-control" id="silinder">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="warna_kb" class="col-sm-2 col-form-label">Warna Kendaraan</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="warna_kb" class="form-control" id="warna_kb">
+                    <div class="mb-3 row">
+                        <label for="warna_kb" class="col-sm-2 col-form-label">Warna Kendaraan</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="warna_kb" class="form-control" id="warna_kb">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="no_bpkb" class="col-sm-2 col-form-label">No. BPKB</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="no_bpkb" class="form-control" id="no_bpkb">
+                    <div class="mb-3 row">
+                        <label for="no_bpkb" class="col-sm-2 col-form-label">No. BPKB</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="no_bpkb" class="form-control" id="no_bpkb">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="no_rangka" class="col-sm-2 col-form-label">No. Rangka</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="no_rangka" class="form-control" id="no_rangka">
+                    <div class="mb-3 row">
+                        <label for="no_rangka" class="col-sm-2 col-form-label">No. Rangka</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="no_rangka" class="form-control" id="no_rangka">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="no_mesin" class="col-sm-2 col-form-label">No. Mesin</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="no_mesin" class="form-control" id="no_mesin">
+                    <div class="mb-3 row">
+                        <label for="no_mesin" class="col-sm-2 col-form-label">No. Mesin</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="no_mesin" class="form-control" id="no_mesin">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="bahan_bakar" class="col-sm-2 col-form-label">Bahan Bakar</label>
-                    <div class="col-sm-10">
-                        <select id="bahan_bakar" name="bahan_bakar" required
-                            class="form-control">
-                            <option value="">Pilih Bahan Bakar</option>
-                            <option value="Bensin">Bensin</option>
-                            <option value="Solar">Solar</option>
-                            <option value="Listrik">Listrik</option>
-                            <option value="Hibrida">Hibrida</option>
-                            <option value="Lainnya">Lainnya</option>
-                        </select>
+                    <div class="mb-3 row">
+                        <label for="bahan_bakar" class="col-sm-2 col-form-label">Bahan Bakar</label>
+                        <div class="col-sm-10">
+                            <select id="bahan_bakar" name="bahan_bakar" required
+                                class="form-control">
+                                <option value="">Pilih Bahan Bakar</option>
+                                <option value="Bensin">Bensin</option>
+                                <option value="Solar">Solar</option>
+                                <option value="Listrik">Listrik</option>
+                                <option value="Hibrida">Hibrida</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="warna_tnbk" class="col-sm-2 col-form-label">Warna TNBK</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="warna_tnbk" class="form-control" id="warna_tnbk">
+                    <div class="mb-3 row">
+                        <label for="warna_tnbk" class="col-sm-2 col-form-label">Warna TNBK</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="warna_tnbk" class="form-control" id="warna_tnbk">
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="mb-3 row mt-4">
-                    <div class="col">
-                        <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
-                        <a href="form_kendaraan.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                    <div class="mb-3 row mt-4">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
+                            <a href="form_kendaraan.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
