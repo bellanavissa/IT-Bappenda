@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -65,8 +69,8 @@
                      <li>
                         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>DATA</span></a>
                         <ul class="collapse list-unstyled" id="element">
-                           <li><a href="general_elements.html">> <span>Kendaraan</span></a></li>
-                           <li><a href="media_gallery.html">> <span>Pemilik</span></a></li>
+                           <li><a href="?page=kendaraan">> <span>Kendaraan</span></a></li>
+                           <li><a href="?page=pemilik">> <span>Pemilik</span></a></li>
                         </ul>
                      </li>
                      <li>
@@ -137,7 +141,52 @@
                            </div>
                         </div>
                      </div>
-                     
+                     <?php 
+					      $page = @$_GET['page'];
+					      $action = @$_GET['action'];
+
+					      if ($page == "kendaraan") {
+					      	if ($action == "") {
+					      		include "inc/kendaraan/kendaraan.php";
+					      	} else if ($action == tambah) {
+					      		include "inc/add.php";
+					      	}
+
+					      } else if ($page == "pemilik") {
+					      	 if ($action == "") {
+					      		include "inc/pemilik/pemilik.php";
+					      	} else if ($action == "tambah") {
+					   			include "inc/karyawan/tambah_karyawan.php";
+					      	} else if ($action == "ubah") {
+                           include "inc/karyawan/ubah_karyawan.php";
+                        }
+
+
+					      	} else if ($page == "pelanggan") {
+                           if ($action == "") {
+					      		include "inc/pelanggan/pelanggan.php";
+                        } else if ($action == "tambah") {
+                           include "inc/pelanggan/tambah_pelanggan.php";
+                        }  else if ($action == "ubah") {
+                           include "inc/pelanggan/ubah_pelanggan.php";
+                        }  else if ($action == "hapus") {
+                           include "inc/pelanggan/hapus_pelanggan.php";
+                        }
+
+
+					      	} else if ($page == "") {
+					      		echo "Selamat datang di halaman utama";
+					      	
+
+
+
+
+					      } else {
+					      	echo "404! Halaman tidak ditemukan";
+					      }
+
+
+					   ?>
                      
                      
                   </div>
