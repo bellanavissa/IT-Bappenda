@@ -156,8 +156,6 @@
                   </div>
                </div>
                <!-- end dashboard inner -->
-=======
->>>>>>> 76bb904b3b39e4ad23a35ad60159fb8eaf1dc5bf
             </div>
             <div class="sidebar_blog_2">
                <h4>General</h4>
