@@ -148,7 +148,7 @@
                      }
                   } else if ($page == "pemilik") {
                      if ($action == "") {
-                        include "inc/pemilik/pemilik.php";
+                        include "inc/pemilik/view_pemilik.php";
                      } else if ($action == "tambah") {
                         include "inc/karyawan/tambah_karyawan.php";
                      } else if ($action == "ubah") {
