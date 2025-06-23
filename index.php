@@ -155,7 +155,7 @@
 
 					      } else if ($page == "kendaraan") {
 					      	 if ($action == "") {
-					      		include "inc/kendaraan/kendaraan.php";
+					      		include "inc/kendaraan/form_kendaraan.php";
 					      	} else if ($action == "tambah") {
 					   			include "inc/karyawan/tambah_karyawan.php";
 					      	} else if ($action == "ubah") {
