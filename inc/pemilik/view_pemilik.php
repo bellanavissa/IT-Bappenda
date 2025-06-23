@@ -1,72 +1,112 @@
 <?php
 require 'koneksi.php';
-
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Data Wajib Pajak</title>
-	<style>
-		body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-		.container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-		h1 { color: #333; text-align: center; }
-		.success { background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin: 15px 0; }
-		.error { background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; margin: 15px 0; }
-		.info { background: #d1ecf1; color: #0c5460; padding: 15px; border-radius: 5px; margin: 15px 0; }
-		table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-		th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-		th { background: #4CAF50; color: white; }
-		tr:hover { background: #f5f5f5; }
-		tr:nth-child(even) { background: #f9f9f9; }
-		.btn { padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; margin: 2px; }
-		.btn-edit { background: #FF9800; color: white; }
-		.btn-delete { background: #f44336; color: white; }
-		.no-data { text-align: center; padding: 50px; color: #666; }
-	</style>
-</head>
-<body>
-	<div class="container">
-		<h1>Data Wajib Pajak</h1>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>SILONA</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- site icon -->
+   <link rel="icon" href="images/fevicon.png" type="image/png" />
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <!-- site css -->
+   <link rel="stylesheet" href="style.css" />
+   <!-- responsive css -->
+   <link rel="stylesheet" href="css/responsive.css" />
+   <!-- color css -->
+   <link rel="stylesheet" href="css/colors.css" />
+   <!-- select bootstrap -->
+   <link rel="stylesheet" href="css/bootstrap-select.css" />
+   <!-- scrollbar css -->
+   <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+   <!-- custom css -->
+   <link rel="stylesheet" href="css/custom.css" />
+   <!-- calendar file css -->
+   <link rel="stylesheet" href="js/semantic.min.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="page_title">
+            <h2>DATA WAJIB PAJAK</h2>
+         </div>
+         <div class="">
+            <div class="white_shd full margin_bottom_30">
+               <div class="full graph_head">
+                  <div class="heading1 margin_0">
+                     <h2>Tabel Daftar Wajib Pajak</h2>
+                     <a href="?page=view_pemilik&action=tambah" type="submit" class="btn btn-success mt-3"><i class="fa fa-pencil" aria-hidden="true"></i> Tambah</a>
+                  </div>
+               </div>
 
-		<?php if (!$koneksi_sukses): ?>
+               <div class="table_section padding_infor_info">
+                  <div class="table-responsive-sm">
+                     <table class="table table-hover">
+                        <tr>
+                           <th>No.</th>
+                           <th>Nama Pemilik</th>
+                           <th>Alamat</th>
+                           <th>No KTP</th>
+                           <th>No HP</th>                          
+                           <th>Aksi</th>
+                        </tr>
+                        <?php
+                        $no = 1;
+                        $query = "SELECT * FROM tbl_wp";
+                        $sql = mysqli_query($koneksi, $query) or die(mysqli_error());
+                        while ($data = mysqli_fetch_array($sql)){
 
-		<?php else: ?>
-			
-			<div class="info">
-				Total Data Wajib Pajak: <?php echo count($data); ?> data
-			</div>
-		<?php endif; ?>
+                           ?>
 
-		<?php if ($koneksi_sukses && count($data) > 0): ?>
-			<table>
-				<tr>
-					<th>ID WP</th>
-					<th>Nama</th>
-					<th>Alamat</th>
-					<th>No KTP</th>
-					<th>No HP</th>
-					<th>Aksi</th>
-				</tr>
-				<?php foreach ($data as $row): ?>
-					<tr>
-						<td><?php echo $row['id_wp']; ?></td>
-						<td><?php echo $row['nama']; ?></td>
-						<td><?php echo $row['alamat']; ?></td>
-						<td><?php echo $row['no_ktp']; ?></td>
-						<td><?php echo $row['no_hp']; ?></td>
-						<td>
-							<button class="btn btn-edit" onclick="alert('Edit ID: <?php echo $row['id_wp']; ?>')">Edit</button>
-							<button class="btn btn-delete" onclick="if(confirm('Hapus data?')) alert('Hapus ID: <?php echo $row['id_wp']; ?>')">Hapus</button>
-						</td>
-					</tr>
-				<?php endforeach; ?>
-			</table>
-		<?php elseif ($koneksi_sukses): ?>
-			<div class="no-data">
-				<h3>Tidak ada data</h3>
-				<p>Tabel tbl_wp kosong</p>
-			</div>
-		<?php endif; ?>
-	</div>
+                           <tr>
+                              <td><?php echo $no++ ; ?></td>
+                              <td><?php echo $data['nama']; ?></td>
+                              <td><?php echo $data['alamat']; ?></td>
+                              <td><?php echo $data['no_ktp']; ?></td>
+                              <td><?php echo $data['no_hp']; ?></td>
+                              <td><a href="?page=view_pemilik&action=ubah&id_wp=<?php echo $data['id_wp']; ?>" type="submit" class="btn btn-sm     btn-primary" name="bubah"><i class="fa fa-edit"></i></a>
+                               <a onclick="return confirm('Yakin akan menghapus data ini?')" href="?page=view_pemilik&action=hapus&id_wp=<?php echo $data['id_wp'] ?>" type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
+
+                            </tr>
+                            <?php
+                         }
+                         ?>
+                      </table>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow animation -->
+    <script src="js/animate.js"></script>
+    <!-- select country -->
+    <script src="js/bootstrap-select.js"></script>
+    <!-- nice scrollbar -->
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script>
+      var ps = new PerfectScrollbar('#sidebar');
+   </script>
+   <!-- custom js -->
+   <script src="js/custom.js"></script>
 </body>
 </html>
