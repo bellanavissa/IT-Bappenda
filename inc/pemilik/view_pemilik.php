@@ -76,8 +76,8 @@ include "inc/koneksi.php";
                               <td><?php echo $data['alamat']; ?></td>
                               <td><?php echo $data['no_ktp']; ?></td>
                               <td><?php echo $data['no_hp']; ?></td>
-                              <td><a href="?page=view_pemilik&action=ubah&id_wp=<?php echo $data['id_wp']; ?>" type="submit" class="btn btn-sm     btn-primary" name="bubah"><i class="fa fa-edit"></i></a>
-                               <a onclick="return confirm('Yakin akan menghapus data ini?')" href="?page=view_pemilik&action=hapus&id_wp=<?php echo $data['id_wp'] ?>" type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
+                              <td><a href="?page=pemilik&action=ubah&id_wp=<?php echo $data['id_wp']; ?>" type="submit" class="btn btn-sm     btn-primary" name="bubah"><i class="fa fa-edit"></i></a>
+                               <a onclick="return confirm('Yakin akan menghapus data ini?')" href="?page=pemilik&action=hapus&id_wp=<?php echo $data['id_wp'] ?>" type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
 
                             </tr>
                             <?php
