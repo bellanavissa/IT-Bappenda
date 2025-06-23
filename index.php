@@ -157,7 +157,7 @@
                      if ($action == "") {
                         include "inc/pemilik/pemilik.php";
                      } else if ($action == "tambah") {
-                        include "inc/karyawan/tambah_karyawan.php";
+                        include "inc/pemilik/form_pemilik.php";
                      } else if ($action == "ubah") {
                         include "inc/karyawan/ubah_karyawan.php";
                      }
