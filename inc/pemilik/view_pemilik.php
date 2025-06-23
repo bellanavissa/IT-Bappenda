@@ -49,7 +49,7 @@ include "inc/koneksi.php";
                <div class="full graph_head">
                   <div class="heading1 margin_0">
                      <h2>Tabel Daftar Wajib Pajak</h2>
-                     <a href="?page=view_pemilik&action=tambah" type="submit" class="btn btn-success mt-3"><i class="fa fa-pencil" aria-hidden="true"></i> Tambah</a>
+                     <a href="?page=pemilik&action=tambah" type="submit" class="btn btn-success mt-3"><i class="fa fa-pencil" aria-hidden="true"></i> Tambah</a>
                   </div>
                </div>
 
