@@ -141,64 +141,23 @@
                   $action = @$_GET['action'];
                   if ($page == "kendaraan") {
                      if ($action == "") {
-                        include "inc/kendaraan/kendaraan.php";
+                        include "inc/kendaraan/form_kendaraan.php";
                      } else if ($action == tambah) {
-                        include "inc/add.php";
+                        include "inc/kendaraan/tambah_kendaraan.php";
                      }
                   } else if ($page == "pemilik") {
                      if ($action == "") {
                         include "inc/pemilik/view_pemilik.php";
                      } else if ($action == "tambah") {
-                        include "inc/karyawan/tambah_karyawan.php";
+                        include "";
                      } else if ($action == "ubah") {
-                        include "inc/karyawan/ubah_karyawan.php";
+                        include "";
                      }
-                  } else if ($page == "pelanggan") {
-                     if ($action == "") {
-                        include "inc/pelanggan/pelanggan.php";
-                     } else if ($action == "tambah") {
-                        include "inc/pelanggan/tambah_pelanggan.php";
-                     } else if ($action == "ubah") {
-                        include "inc/pelanggan/ubah_pelanggan.php";
-                     } else if ($action == "hapus") {
-                        include "inc/pelanggan/hapus_pelanggan.php";
-                     }
-                  } else if ($page == "") {
-                     echo "Selamat datang di halaman utama";
-                  } else {
-                     echo "404! Halaman tidak ditemukan";
-                  }
-					      if ($page == "administrator") {
-					      	if ($action == "") {
-					      		include "inc/administrator.php";
-					      	} else if ($action == "tambah") {
-					      		include "inc/add.php";
-					      	}
-
-					      } else if ($page == "kendaraan") {
-					      	 if ($action == "") {
-					      		include "inc/kendaraan/form_kendaraan.php";
-					      	} else if ($action == "tambah") {
-					   			include "inc/kendaraan/tambah_kendaraan.php";
-					      	} else if ($action == "ubah") {
-                           include "inc/kendaraan/ubah_kendaraan.php";
-                        }
+                  
 
 
-					      	} else if ($page == "pemilik") {
-                           if ($action == "") {
-					      		include "inc/pemilik/view_pemilik.php";
-                        } else if ($action == "tambah") {
-                           include "inc/pemilik/form_pemilik.php";
-                        }  else if ($action == "ubah") {
-                           include "inc/pelanggan/ubah_pelanggan.php";
-                        }  else if ($action == "hapus") {
-                           include "inc/pelanggan/hapus_pelanggan.php";
-                        }
-
-
-					      	} else if ($page == "") {
-					      		echo "Selamat datang di halaman utama";
+					      } else if ($page == "") {
+					      	echo "Selamat datang di halaman utama";
 					      	
 
 
