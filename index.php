@@ -152,8 +152,11 @@
                      } else if ($action == "tambah") {
                         include "inc/pemilik/form_pemilik.php";
                      } else if ($action == "ubah") {
-                        include "";
+                        include "inc/pemilik/ubah_pemilik.php";
+                     } else if ($action == "hapus") {
+                        include "inc/pemilik/hapus_pemilik.php";
                      }
+
                   
 
 
