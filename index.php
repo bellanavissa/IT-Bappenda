@@ -60,7 +60,6 @@
                      </div>
                   </div>
                </div>
-<<<<<<< HEAD
                <div class="sidebar_blog_2">
                   <h4>General</h4>
                   <ul class="list-unstyled components">
