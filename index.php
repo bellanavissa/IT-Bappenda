@@ -151,7 +151,7 @@
 					      	 if ($action == "") {
 					      		include "inc/kendaraan/form_kendaraan.php";
 					      	} else if ($action == "tambah") {
-					   			include "inc/karyawan/tambah_karyawan.php";
+					   			include "inc/karyawan/tambah_kendaraan.php";
 					      	} else if ($action == "ubah") {
                            include "inc/karyawan/ubah_karyawan.php";
                         }
