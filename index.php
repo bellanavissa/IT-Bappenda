@@ -168,7 +168,6 @@
                   } else {
                      echo "404! Halaman tidak ditemukan";
                   }
-=======
 					      if ($page == "administrator") {
 					      	if ($action == "") {
 					      		include "inc/administrator.php";
