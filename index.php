@@ -168,7 +168,6 @@
                   } else {
                      echo "404! Halaman tidak ditemukan";
                   }
-=======
 					      if ($page == "administrator") {
 					      	if ($action == "") {
 					      		include "inc/administrator.php";
@@ -180,9 +179,9 @@
 					      	 if ($action == "") {
 					      		include "inc/kendaraan/form_kendaraan.php";
 					      	} else if ($action == "tambah") {
-					   			include "inc/karyawan/tambah_kendaraan.php";
+					   			include "inc/kendaraan/tambah_kendaraan.php";
 					      	} else if ($action == "ubah") {
-                           include "inc/karyawan/ubah_karyawan.php";
+                           include "inc/kendaraan/ubah_kendaraan.php";
                         }
 
 
@@ -208,7 +207,6 @@
 					      } else {
 					      	echo "404! Halaman tidak ditemukan";
 					      }
->>>>>>> 7bcfac6fd42eaba27ef68bf9687c50a7e36afa05
 
 
 					   ?>
