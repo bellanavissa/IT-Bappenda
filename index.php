@@ -150,7 +150,7 @@
                      if ($action == "") {
                         include "inc/pemilik/view_pemilik.php";
                      } else if ($action == "tambah") {
-                        include "";
+                        include "inc/pemilik/form_pemilik.php";
                      } else if ($action == "ubah") {
                         include "";
                      }
