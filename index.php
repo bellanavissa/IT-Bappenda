@@ -149,7 +149,7 @@
 					      	if ($action == "") {
 					      		include "inc/kendaraan/kendaraan.php";
 					      	} else if ($action == tambah) {
-					      		include "inc/add.php";
+					      		include "inc//form_kendaraan.php";
 					      	}
 
 					      } else if ($page == "pemilik") {
