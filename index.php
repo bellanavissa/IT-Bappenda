@@ -60,92 +60,85 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="sidebar_blog_2">
-               <h4>General</h4>
-               <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="#dashboard" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
-
-                  </li>
-                  <li>
-                     <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>DATA</span></a>
-                     <ul class="collapse list-unstyled" id="element">
-                        <li><a href="?page=kendaraan">> <span>Kendaraan</span></a></li>
-                        <li><a href="?page=pemilik">> <span>Pemilik</span></a></li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
-                     <ul class="collapse list-unstyled" id="apps">
-                        <li><a href="email.html">> <span>Email</span></a></li>
-                        <li><a href="calendar.html">> <span>Calendar</span></a></li>
-                        <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-                     </ul>
-                  </li>
-                  <li class="active">
-                     <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Additional Pages</span></a>
-                     <ul class="collapse list-unstyled" id="additional_page">
-                        <li>
-                           <a href="profile.html">> <span>Profile</span></a>
-                        </li>
-                        <li>
-                           <a href="project.html">> <span>Projects</span></a>
-                        </li>
-                        <li>
-                           <a href="login.html">> <span>Login</span></a>
-                        </li>
-                        <li>
-                           <a href="404_error.html">> <span>404 Error</span></a>
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-         <!-- end sidebar -->
-         <!-- right content -->
-         <div id="content">
-            <!-- topbar -->
-            <div class="topbar">
-               <nav class="navbar navbar-expand-lg navbar-light">
-                  <div class="full">
-                     <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
-                     <div class="logo_section">
-                        <a href="index.html"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
-                     </div>
-                     <div class="right_topbar">
-                        <div class="icon_info">
-                           <ul class="user_profile_dd">
-                              <li>
-                                 <a class="dropdown-toggle" data-toggle="dropdown"><img class="asset/img-responsive rounded-circle" src="asset/images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
-                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="profile.html">My Profile</a>
-                                    <a class="dropdown-item" href="settings.html">Settings</a>
-                                    <a class="dropdown-item" href="help.html">Help</a>
-                                    <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                 </div>
-                              </li>
-                           </ul>
+               <div class="sidebar_blog_2">
+                  <h4>MENU UTAMA</h4>
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" >
+                        <i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
+                     </li>
+                     <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>DATA</span></a>
+                        <ul class="collapse list-unstyled" id="element">
+                           <li><a href="?page=kendaraan">> <span>Kendaraan</span></a></li>
+                           <li><a href="?page=pemilik">> <span>Pemilik</span></a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
+                        <ul class="collapse list-unstyled" id="apps">
+                           <li><a href="email.html">> <span>Email</span></a></li>
+                           <li><a href="calendar.html">> <span>Calendar</span></a></li>
+                           <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
+                        </ul>
+                     </li>
+                     <li class="active">
+                        <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Additional Pages</span></a>
+                        <ul class="collapse list-unstyled" id="additional_page">
+                           <li>
+                              <a href="profile.html">> <span>Profile</span></a>
+                           </li>
+                           <li>
+                              <a href="project.html">> <span>Projects</span></a>
+                           </li>
+                           <li>
+                              <a href="login.html">> <span>Login</span></a>
+                           </li>
+                           <li>
+                              <a href="404_error.html">> <span>404 Error</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="logo_section">
+                           <a href="index.html"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
+                        </div>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="asset/img-responsive rounded-circle" src="asset/images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="profile.html">My Profile</a>
+                                       <a class="dropdown-item" href="settings.html">Settings</a>
+                                       <a class="dropdown-item" href="help.html">Help</a>
+                                       <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
                         </div>
                      </div>
-                  </div>
-               </nav>
-            </div>
-            <!-- end topbar -->
-            <!-- dashboard inner -->
-            <div class="midde_cont">
-               <div class="container-fluid">
-                  <div class="row column_title">
-                     <div class="col-md-12">
-                        <div class="page_title">
-                           <h2>Dashboard</h2>
-                        </div>
-                     </div>
-                  </div>
-                  <?php
-                  $page = @$_GET['page'];
-                  $action = @$_GET['action'];
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     
+                     <?php 
+					      $page = @$_GET['page'];
+					      $action = @$_GET['action'];
 
                   if ($page == "kendaraan") {
                      if ($action == "") {
@@ -157,7 +150,7 @@
                      if ($action == "") {
                         include "inc/pemilik/pemilik.php";
                      } else if ($action == "tambah") {
-                        include "inc/pemilik/form_pemilik.php";
+                        include "inc/karyawan/tambah_karyawan.php";
                      } else if ($action == "ubah") {
                         include "inc/karyawan/ubah_karyawan.php";
                      }
@@ -178,8 +171,10 @@
                   }
 
 
-                  ?>
+					   ?>
 
+
+                     
 
                </div>
                <!-- footer -->
