@@ -23,6 +23,8 @@ if ($koneksi ==  false) {
 			echo"berhasil koneksi online offline";
 		}
 	
+} else {
+    echo "berhasil koneksi offline";
 }
 
 
