@@ -1,5 +1,5 @@
 <?php
-require 'koneksi.php';
+include "inc/koneksi";
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ require 'koneksi.php';
    </head>
    <body class="dashboard dashboard_1">
       <div class="full_container">
-         <div class="page_title">
+      <div class="page_title">
             <h2>DATA WAJIB PAJAK</h2>
          </div>
          <div class="">
@@ -69,9 +69,7 @@ require 'koneksi.php';
                         $query = "SELECT * FROM tbl_wp";
                         $sql = mysqli_query($koneksi, $query) or die(mysqli_error());
                         while ($data = mysqli_fetch_array($sql)){
-
                            ?>
-
                            <tr>
                               <td><?php echo $no++ ; ?></td>
                               <td><?php echo $data['nama']; ?></td>
@@ -107,6 +105,9 @@ require 'koneksi.php';
       var ps = new PerfectScrollbar('#sidebar');
    </script>
    <!-- custom js -->
-   <script src="js/custom.js"></script>
+   <script src="js/custom.js">
+		
+   </script>
+
 </body>
 </html>
