@@ -155,9 +155,9 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="warna_tnbk" class="col-sm-2 col-form-label">Warna TNBK</label>
+                        <label for="warna_tnkb" class="col-sm-2 col-form-label">Warna TNBK</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_tnbk" class="form-control" id="warna_tnbk">
+                            <input type="text" name="warna_tnkb" class="form-control" id="warna_tnkb">
                         </div>
                     </div>
 
