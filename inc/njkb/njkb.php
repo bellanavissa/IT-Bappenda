@@ -44,7 +44,7 @@ include "inc/koneksi.php";
       <div class="page_title">
             <h2>DATA NILAI JUAL KENDARAAN BERMOTOR (NJKB)</h2>
          </div>
-         <div class="">
+         <div class="full_container">
             <div class="white_shd full margin_bottom_30">
                <div class="full graph_head">
                   <div class="heading1 margin_0">
@@ -132,8 +132,8 @@ include "inc/koneksi.php";
                         }
 
                          ?>
-
-
+                      </div>
+                        <div>
                     </div>
                 </div>
 
