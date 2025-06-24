@@ -4,7 +4,7 @@ include 'inc/koneksi.php';
 header("Content-Type: text/xml");
 
 $query = "SELECT * FROM tbl_wp";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($koneksi, $query);
 
 echo "<?xml version='1.0' encoding='UTF-8'?>\n";
 echo "<wp_list>\n";
