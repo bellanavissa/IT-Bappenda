@@ -170,9 +170,9 @@
                      } else if ($action == "tambah") {
                         include "inc/njkb/njkb.php";
                      } else if ($action == "ubah") {
-                        include "inc/pemilik/ubah_pemilik.php";
+                        include "inc/njkb/ubah_njkb.php";
                      } else if ($action == "hapus") {
-                        include "inc/pemilik/hapus_pemilik.php";
+                        include "inc/njkb/hapus_njkb.php";
                      }
 
 
