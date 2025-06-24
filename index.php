@@ -47,7 +47,7 @@
             <div class="sidebar_blog_1">
                <div class="sidebar-header">
                   <div class="logo_section">
-                     <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
+                     <a href="index.php"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
                   </div>
                </div>
                <div class="sidebar_user_info">
@@ -75,9 +75,9 @@
                         </ul>
                      </li>
                      <li>
-                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>INFO PKB</span></a>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>NJKB</span></a>
                         <ul class="collapse list-unstyled" id="apps">
-                           <li><a href="email.html">> <span>PKB</span></a></li>
+                           <li><a href="?page=njkb">> <span>NJKB</span></a></li>
                            <li><a href="calendar.html">> <span>Calendar</span></a></li>
                            <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
                         </ul>
@@ -111,7 +111,7 @@
                      <div class="full">
                         <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
                         <div class="logo_section">
-                           <a href="index.html"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
+                           <a href="index.php"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
                         </div>
                         <div class="right_topbar">
                            <div class="icon_info">
