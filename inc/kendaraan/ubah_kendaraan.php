@@ -22,16 +22,16 @@ require 'inc/koneksi.php';
     $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnkb']);
     
     // Query untuk update data
-    $sql = "UPDATE tbl_wp SET 
+    $sql = "UPDATE tbl_knd SET 
                 nopol = '$nopol',
                 merk = '$merk',
                 tipe = '$tipe',
-                silinder = '$silinder'
-                warna_kb = '$warna_kb'
-                no_bpkb = '$no_bpkb'
-                no_rangka = '$no_rangka'
-                no_mesin = '$no_mesin'
-                bahan_bakar = '$bahan_bakar'
+                silinder = '$silinder',
+                warna_kb = '$warna_kb',
+                no_bpkb = '$no_bpkb',
+                no_rangka = '$no_rangka',
+                no_mesin = '$no_mesin',
+                bahan_bakar = '$bahan_bakar',
                 warna_tnkb = '$warna_tnkb'
             WHERE id_knd = $id_knd
             ";
@@ -162,15 +162,13 @@ require 'inc/koneksi.php';
                     <div class="mb-3 row">
                         <label for="bahan_bakar" class="col-sm-2 col-form-label">Bahan Bakar</label>
                         <div class="col-sm-10">
-                            <select id="bahan_bakar" name="bahan_bakar" required
-                                class="form-control">
-                                <option value="<?= $row["bahan_bakar"]; ?>"></option>
-                                <option value="Bensin">Bensin</option>
-                                <option value="Solar">Solar</option>
-                                <option value="Listrik">Listrik</option>
-                                <option value="Hibrida">Hibrida</option>
-                                <option value="Lainnya">Lainnya</option>
-                            </select>
+                            <select id="bahan_bakar" name="bahan_bakar" required class="form-control">
+                            <option value="Bensin" <?= ($row["bahan_bakar"] == "Bensin") ? 'selected' : ''; ?>>Bensin</option>
+                            <option value="Solar" <?= ($row["bahan_bakar"] == "Solar") ? 'selected' : ''; ?>>Solar</option>
+                            <option value="Listrik" <?= ($row["bahan_bakar"] == "Listrik") ? 'selected' : ''; ?>>Listrik</option>
+                            <option value="Hibrida" <?= ($row["bahan_bakar"] == "Hibrida") ? 'selected' : ''; ?>>Hibrida</option>
+                            <option value="Lainnya" <?= ($row["bahan_bakar"] == "Lainnya") ? 'selected' : ''; ?>>Lainnya</option>
+                        </select>
                         </div>
                     </div>
                     <div class="mb-3 row">
