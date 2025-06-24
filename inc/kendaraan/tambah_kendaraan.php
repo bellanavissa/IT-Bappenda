@@ -1,5 +1,42 @@
 <?php
 include "inc/koneksi.php";
+
+if (isset($_POST['submit'])) {
+
+    $nopol = mysqli_real_escape_string($koneksi, $_POST['nopol']);
+    $merk = mysqli_real_escape_string($koneksi, $_POST['merk']);
+    $tipe = mysqli_real_escape_string($koneksi, $_POST['tipe']);
+    $silinder = mysqli_real_escape_string($koneksi, $_POST['silinder']);
+    $warna_kb = mysqli_real_escape_string($koneksi, $_POST['warna_kb']);
+    $no_bpkb = mysqli_real_escape_string($koneksi, $_POST['no_bpkb']);
+    $no_rangka = mysqli_real_escape_string($koneksi, $_POST['no_rangka']);
+    $no_mesin = mysqli_real_escape_string($koneksi, $_POST['no_mesin']);
+    $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
+    $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnbk']);
+    
+    // Query untuk insert data
+    $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnbk) 
+    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$n0_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnbk' )";
+
+    if (mysqli_query($koneksi, $sql)) {
+        echo "
+            <script>
+                alert('data berhasil ditambahkan');
+                document.location.href = '?page=kendaraan';
+            </script>
+        ";
+    } else {
+        echo "<script>
+                alert('data gagal ditambahkan');
+                document.location.href = '?page=kendaraan';
+            </script>" . $sql . "<br>" . mysqli_error($koneksi);
+        "
+           
+        ";
+    }
+
+    mysqli_close($koneksi);
+}
 ?>
 
 <!DOCTYPE html>
