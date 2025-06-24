@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     // Query untuk tambah data
     $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnkb) 
-    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$nO_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
+    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$no_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
 
     if (mysqli_query($koneksi, $sql)) {
         echo "
