@@ -64,7 +64,7 @@
                   <h4>MENU UTAMA</h4>
                   <ul class="list-unstyled components">
                      <li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" >
+                        <a href="index.php" data-toggle="collapse" aria-expanded="false" >
                         <i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
                      </li>
                      <li>
@@ -75,9 +75,9 @@
                         </ul>
                      </li>
                      <li>
-                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>INFO PKB</span></a>
                         <ul class="collapse list-unstyled" id="apps">
-                           <li><a href="email.html">> <span>Email</span></a></li>
+                           <li><a href="email.html">> <span>PKB</span></a></li>
                            <li><a href="calendar.html">> <span>Calendar</span></a></li>
                            <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
                         </ul>
