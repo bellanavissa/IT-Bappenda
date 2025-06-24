@@ -47,7 +47,7 @@
             <div class="sidebar_blog_1">
                <div class="sidebar-header">
                   <div class="logo_section">
-                     <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
+                     <a href="index.php"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
                   </div>
                </div>
                <div class="sidebar_user_info">
@@ -64,7 +64,7 @@
                   <h4>MENU UTAMA</h4>
                   <ul class="list-unstyled components">
                      <li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" >
+                        <a href="index.php" data-toggle="collapse" aria-expanded="false" >
                         <i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
                      </li>
                      <li>
@@ -75,9 +75,9 @@
                         </ul>
                      </li>
                      <li>
-                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>NJKB</span></a>
                         <ul class="collapse list-unstyled" id="apps">
-                           <li><a href="email.html">> <span>Email</span></a></li>
+                           <li><a href="?page=njkb">> <span>NJKB</span></a></li>
                            <li><a href="calendar.html">> <span>Calendar</span></a></li>
                            <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
                         </ul>
@@ -111,7 +111,7 @@
                      <div class="full">
                         <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
                         <div class="logo_section">
-                           <a href="index.html"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
+                           <a href="index.php"><img class="img-responsive" src="asset/images/logo/logo.png" alt="#" /></a>
                         </div>
                         <div class="right_topbar">
                            <div class="icon_info">
@@ -141,7 +141,7 @@
                   $action = @$_GET['action'];
                   if ($page == "kendaraan") {
                      if ($action == "") {
-                        include "inc/kendaraan/form_kendaraan.php";
+                        include "inc/kendaraan/view_kendaraan.php";
                      } else if ($action == "tambah") {
                         include "inc/kendaraan/tambah_kendaraan.php";
                      }
@@ -157,7 +157,16 @@
                         include "inc/pemilik/hapus_pemilik.php";
                      }
 
-                  
+                  } else if ($page == "njkb") {
+                     if ($action == "") {
+                        include "inc/njkb/njkb.php";
+                     } else if ($action == "tambah") {
+                        include "inc/njkb/njkb.php";
+                     } else if ($action == "ubah") {
+                        include "inc/pemilik/ubah_pemilik.php";
+                     } else if ($action == "hapus") {
+                        include "inc/pemilik/hapus_pemilik.php";
+                     }
 
 
 					      } else if ($page == "") {

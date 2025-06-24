@@ -1,5 +1,42 @@
 <?php
 include "inc/koneksi.php";
+
+if (isset($_POST['submit'])) {
+
+    $nopol = mysqli_real_escape_string($koneksi, $_POST['nopol']);
+    $merk = mysqli_real_escape_string($koneksi, $_POST['merk']);
+    $tipe = mysqli_real_escape_string($koneksi, $_POST['tipe']);
+    $silinder = mysqli_real_escape_string($koneksi, $_POST['silinder']);
+    $warna_kb = mysqli_real_escape_string($koneksi, $_POST['warna_kb']);
+    $no_bpkb = mysqli_real_escape_string($koneksi, $_POST['no_bpkb']);
+    $no_rangka = mysqli_real_escape_string($koneksi, $_POST['no_rangka']);
+    $no_mesin = mysqli_real_escape_string($koneksi, $_POST['no_mesin']);
+    $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
+    $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnkb']);
+    
+    // Query untuk insert data
+    $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnkb) 
+    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$nO_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
+
+    if (mysqli_query($koneksi, $sql)) {
+        echo "
+            <script>
+                alert('data berhasil ditambahkan');
+                document.location.href = '?page=kendaraan';
+            </script>
+        ";
+    } else {
+        echo "<script>
+                alert('data gagal ditambahkan');
+                document.location.href = '?page=kendaraan';
+            </script>" . $sql . "<br>" . mysqli_error($koneksi);
+        "
+           
+        ";
+    }
+
+    mysqli_close($koneksi);
+}
 ?>
 
 <!DOCTYPE html>
@@ -118,9 +155,9 @@ include "inc/koneksi.php";
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="warna_tnbk" class="col-sm-2 col-form-label">Warna TNBK</label>
+                        <label for="warna_tnkb" class="col-sm-2 col-form-label">Warna TNBK</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_tnbk" class="form-control" id="warna_tnbk">
+                            <input type="text" name="warna_tnkb" class="form-control" id="warna_tnkb">
                         </div>
                     </div>
 
