@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
     $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnkb']);
     
-    // Query untuk insert data
+    // Query untuk tambah data
     $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnkb) 
     VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$nO_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
 
@@ -165,7 +165,7 @@ if (isset($_POST['submit'])) {
                     <div class="mb-3 row mt-4">
                         <div class="col">
                             <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
-                            <a href="form_kendaraan.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                            <a href="?page=kendaraan" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
                         </div>
                     </div>
                 </form>
