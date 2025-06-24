@@ -12,11 +12,11 @@ if (isset($_POST['submit'])) {
     $no_rangka = mysqli_real_escape_string($koneksi, $_POST['no_rangka']);
     $no_mesin = mysqli_real_escape_string($koneksi, $_POST['no_mesin']);
     $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
-    $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnbk']);
+    $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnkb']);
     
     // Query untuk insert data
-    $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnbk) 
-    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$n0_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnbk' )";
+    $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnkb) 
+    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$nO_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
 
     if (mysqli_query($koneksi, $sql)) {
         echo "
