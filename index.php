@@ -141,7 +141,7 @@
                   $action = @$_GET['action'];
                   if ($page == "kendaraan") {
                      if ($action == "") {
-                        include "inc/kendaraan/form_kendaraan.php";
+                        include "inc/kendaraan/view_kendaraan.php";
                      } else if ($action == "tambah") {
                         include "inc/kendaraan/tambah_kendaraan.php";
                      }
