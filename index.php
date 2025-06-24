@@ -157,7 +157,16 @@
                         include "inc/pemilik/hapus_pemilik.php";
                      }
 
-                  
+                  } else if ($page == "njkb") {
+                     if ($action == "") {
+                        include "inc/njkb/njkb.php";
+                     } else if ($action == "tambah") {
+                        include "inc/njkb/njkb.php";
+                     } else if ($action == "ubah") {
+                        include "inc/pemilik/ubah_pemilik.php";
+                     } else if ($action == "hapus") {
+                        include "inc/pemilik/hapus_pemilik.php";
+                     }
 
 
 					      } else if ($page == "") {
