@@ -81,7 +81,7 @@ include "inc/koneksi.php";
                            <td><?php echo $no++; ?></td>
                            <td><?php echo $data['nopol']; ?></td>
                            <td><?php echo $data['merk']; ?></td>
-                           <td><?php echo $data['tiper']; ?></td>
+                           <td><?php echo $data['tipe']; ?></td>
                            <td><?php echo $data['silinder']; ?></td>
                            <td><?php echo $data['warna_kb']; ?></td>
                            <td><?php echo $data['no_bpkb']; ?></td>
