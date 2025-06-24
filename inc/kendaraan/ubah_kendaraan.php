@@ -10,12 +10,12 @@ require 'inc/koneksi.php';
     if (isset($_POST['submit'])) {
 
     $id_knd = mysqli_real_escape_string($koneksi, $_POST['id_knd']);
-    $nopol = mysqli_real_escape_string($koneksi, $_POST['nopol']);
-    $merk = mysqli_real_escape_string($koneksi, $_POST['merk']);
-    $tipe = mysqli_real_escape_string($koneksi, $_POST['tipe']);
-    $silinder = mysqli_real_escape_string($koneksi, $_POST['silinder']);
+    // $nopol = mysqli_real_escape_string($koneksi, $_POST['nopol']);
+    // $merk = mysqli_real_escape_string($koneksi, $_POST['merk']);
+    // $tipe = mysqli_real_escape_string($koneksi, $_POST['tipe']);
+    // $silinder = mysqli_real_escape_string($koneksi, $_POST['silinder']);
     $warna_kb = mysqli_real_escape_string($koneksi, $_POST['warna_kb']);
-    $no_bpkb = mysqli_real_escape_string($koneksi, $_POST['no_bpkb']);
+    // $no_bpkb = mysqli_real_escape_string($koneksi, $_POST['no_bpkb']);
     $no_rangka = mysqli_real_escape_string($koneksi, $_POST['no_rangka']);
     $no_mesin = mysqli_real_escape_string($koneksi, $_POST['no_mesin']);
     $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
@@ -23,12 +23,12 @@ require 'inc/koneksi.php';
     
     // Query untuk update data
     $sql = "UPDATE tbl_knd SET 
-                nopol = '$nopol',
-                merk = '$merk',
-                tipe = '$tipe',
-                silinder = '$silinder',
+                -- nopol = '$nopol',
+                -- merk = '$merk',
+                -- tipe = '$tipe',
+                -- silinder = '$silinder',
                 warna_kb = '$warna_kb',
-                no_bpkb = '$no_bpkb',
+                -- no_bpkb = '$no_bpkb',
                 no_rangka = '$no_rangka',
                 no_mesin = '$no_mesin',
                 bahan_bakar = '$bahan_bakar',
