@@ -13,10 +13,10 @@ if (isset($_POST['submit'])) {
     $no_mesin = mysqli_real_escape_string($koneksi, $_POST['no_mesin']);
     $bahan_bakar = mysqli_real_escape_string($koneksi, $_POST['bahan_bakar']);
     $warna_tnkb = mysqli_real_escape_string($koneksi, $_POST['warna_tnkb']);
-    
-    // Query untuk insert data
+
+    // Query untuk tambah data
     $sql = "INSERT INTO tbl_knd (nopol, merk, tipe, silinder, warna_kb, no_bpkb, no_rangka, no_mesin, bahan_bakar, warna_tnkb) 
-    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$nO_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
+    VALUES ('$nopol', '$merk', '$tipe', '$silinder','$warna_kb', '$no_bpkb', '$no_rangka', '$no_mesin', '$bahan_bakar', '$warna_tnkb' )";
 
     if (mysqli_query($koneksi, $sql)) {
         echo "
@@ -82,69 +82,62 @@ if (isset($_POST['submit'])) {
                 <h1 class="text-3xl font-bold text-gray-800">TAMBAH KENDARAAN</h1>
                 <p class="text-gray-600">Badan Pendapatan Daerah - BAPPENDA</p>
             </div>
-
-            <div class="col-sm-4">
-                <!-- <form action="" method="post">
-                      <input type="text" name="keyword" size="38" autofocus placeholder="masukkan keyword pencarian.." autocomplete="off">
-                      <button type="submit" name="cari_spesifikasi_rumah">Cari</button>
-                      </form> -->
-
-            </div>
+          
             <div class="container">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="mb-3 row">
                         <label for="nopol" class="col-sm-2 col-form-label">Plat Nomor Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nopol" class="form-control" id="nopol">
+                            <input type="text" name="nopol" class="form-control col-sm-11" id="nopol">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="merk" class="col-sm-2 col-form-label">Merk Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="merk" class="form-control" id="merk">
+                            <input type="text" name="merk" class="form-control col-sm-11" id="merk">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="tipe" class="col-sm-2 col-form-label">Tipe Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="tipe" class="form-control" id="tipe">
+                            <input type="text" name="tipe" class="form-control col-sm-11" id="tipe">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="silinder" class="col-sm-2 col-form-label">Silinder</label>
                         <div class="col-sm-10">
-                            <input type="text" name="silinder" class="form-control" id="silinder">
+                            <input type="text" name="silinder" class="form-control col-sm-11" id="silinder">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="warna_kb" class="col-sm-2 col-form-label">Warna Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_kb" class="form-control" id="warna_kb">
+                            <input type="text" name="warna_kb" class="form-control col-sm-11" id="warna_kb">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_bpkb" class="col-sm-2 col-form-label">No. BPKB</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_bpkb" class="form-control" id="no_bpkb">
+                            <input type="text" name="no_bpkb" class="form-control col-sm-11" id="no_bpkb">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_rangka" class="col-sm-2 col-form-label">No. Rangka</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_rangka" class="form-control" id="no_rangka">
+                            <input type="text" name="no_rangka" class="form-control col-sm-11" id="no_rangka">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_mesin" class="col-sm-2 col-form-label">No. Mesin</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_mesin" class="form-control" id="no_mesin">
+                            <input type="text" name="no_mesin" class="form-control col-sm-11" id="no_mesin">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="bahan_bakar" class="col-sm-2 col-form-label">Bahan Bakar</label>
                         <div class="col-sm-10">
                             <select id="bahan_bakar" name="bahan_bakar" required
-                                class="form-control">
+                                class="form-control col-sm-11">
                                 <option value="">Pilih Bahan Bakar</option>
                                 <option value="Bensin">Bensin</option>
                                 <option value="Solar">Solar</option>
@@ -157,7 +150,7 @@ if (isset($_POST['submit'])) {
                     <div class="mb-3 row">
                         <label for="warna_tnkb" class="col-sm-2 col-form-label">Warna TNBK</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_tnkb" class="form-control" id="warna_tnkb">
+                            <input type="text" name="warna_tnkb" class="form-control col-sm-11" id="warna_tnkb">
                         </div>
                     </div>
 
@@ -165,12 +158,13 @@ if (isset($_POST['submit'])) {
                     <div class="mb-3 row mt-4">
                         <div class="col">
                             <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
-                            <a href="form_kendaraan.php" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
+                            <a href="?page=kendaraan" button type="submit" class="btn btn-danger" name="submit">Batal</button></a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

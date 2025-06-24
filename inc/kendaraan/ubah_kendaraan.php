@@ -114,54 +114,55 @@ require 'inc/koneksi.php';
                     <div class="mb-3 row">
                         <label for="nopol" class="col-sm-2 col-form-label">Plat Nomor Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nopol" class="form-control" id="nopol" value="<?= $row["nopol"]; ?>" disabled>
+                            <input type="text" name="nopol" class="form-control col-sm-11" id="nopol" value="<?= $row["nopol"]; ?>" disabled>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="merk" class="col-sm-2 col-form-label">Merk Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="merk" class="form-control" id="merk" value="<?= $row["merk"]; ?>" disabled>
+                            <input type="text" name="merk" class="form-control col-sm-11" id="merk" value="<?= $row["merk"]; ?>" disabled>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="tipe" class="col-sm-2 col-form-label">Tipe Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="tipe" class="form-control" id="tipe" value="<?= $row["tipe"]; ?>" disabled>
+                            <input type="text" name="tipe" class="form-control col-sm-11" id="tipe" value="<?= $row["tipe"]; ?>" disabled>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="silinder" class="col-sm-2 col-form-label">Silinder</label>
                         <div class="col-sm-10">
-                            <input type="text" name="silinder" class="form-control" id="silinder" value="<?= $row["silinder"]; ?>" disabled>
+                            <input type="text" name="silinder" class="form-control col-sm-11" id="silinder" value="<?= $row["silinder"]; ?>" disabled>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="warna_kb" class="col-sm-2 col-form-label">Warna Kendaraan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_kb" class="form-control" id="warna_kb" value="<?= $row["warna_kb"]; ?>">
+                            <input type="text" name="warna_kb" class="form-control col-sm-11" id="warna_kb" value="<?= $row["warna_kb"]; ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_bpkb" class="col-sm-2 col-form-label">No. BPKB</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_bpkb" class="form-control" id="no_bpkb" value="<?= $row["no_bpkb"]; ?>" disabled>
+                            <input type="text" name="no_bpkb" class="form-control col-sm-11" id="no_bpkb" value="<?= $row["no_bpkb"]; ?>" disabled>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_rangka" class="col-sm-2 col-form-label">No. Rangka</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_rangka" class="form-control" id="no_rangka" value="<?= $row["no_rangka"]; ?>">
+                            <input type="text" name="no_rangka" class="form-control col-sm-11" id="no_rangka" value="<?= $row["no_rangka"]; ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="no_mesin" class="col-sm-2 col-form-label">No. Mesin</label>
                         <div class="col-sm-10">
-                            <input type="text" name="no_mesin" class="form-control" id="no_mesin" value="<?= $row["no_mesin"]; ?>">
+                            <input type="text" name="no_mesin" class="form-control col-sm-11" id="no_mesin" value="<?= $row["no_mesin"]; ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="bahan_bakar" class="col-sm-2 col-form-label">Bahan Bakar</label>
                         <div class="col-sm-10">
+
                             <select id="bahan_bakar" name="bahan_bakar" required class="form-control">
                             <option value="Bensin" <?= ($row["bahan_bakar"] == "Bensin") ? 'selected' : ''; ?>>Bensin</option>
                             <option value="Solar" <?= ($row["bahan_bakar"] == "Solar") ? 'selected' : ''; ?>>Solar</option>
@@ -169,12 +170,13 @@ require 'inc/koneksi.php';
                             <option value="Hibrida" <?= ($row["bahan_bakar"] == "Hibrida") ? 'selected' : ''; ?>>Hibrida</option>
                             <option value="Lainnya" <?= ($row["bahan_bakar"] == "Lainnya") ? 'selected' : ''; ?>>Lainnya</option>
                         </select>
+
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="warna_tnkb" class="col-sm-2 col-form-label">Warna TNKB</label>
                         <div class="col-sm-10">
-                            <input type="text" name="warna_tnkb" class="form-control" id="warna_tnkb" value="<?= $row["warna_tnkb"]; ?>">
+                            <input type="text" name="warna_tnkb" class="form-control col-sm-11" id="warna_tnkb" value="<?= $row["warna_tnkb"]; ?>">
                         </div>
                     </div>
 

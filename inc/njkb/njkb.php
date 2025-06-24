@@ -44,7 +44,7 @@ include "inc/koneksi.php";
       <div class="page_title">
             <h2>DATA NILAI JUAL KENDARAAN BERMOTOR (NJKB)</h2>
          </div>
-         <div class="">
+         <div class="full_container">
             <div class="white_shd full margin_bottom_30">
                <div class="full graph_head">
                   <div class="heading1 margin_0">
@@ -58,7 +58,7 @@ include "inc/koneksi.php";
                               <select class="form-control" name="tjenis_kdr">
                                   <option>Pilih</option>
                                   <option value="Bus">Bus</option>
-                                  <option value="Motor">Motor</option>
+                                  <option value="Motor">Motor (703)</option>
                                   <option value="Jeep">Jeep</option>
                                   <option value="Mikrobus">Mikrobus</option>
                                   <option value="Motor">Motor</option>
@@ -122,7 +122,7 @@ include "inc/koneksi.php";
                             if ($tjenis_kdr == "" || $tmerk == "" || $tahun == "" || $ttipe == "" || $tnilai_jual == "" || $njkb == "") {
                             ?><script>alert('Inputan tidak boleh kosong!')</script><?php
                           } else {
-                                mysqli_query($koneksi,"INSERT INTO tb_njkb (jenis, merk, tahun, tipe, nilai_jual, njkb) 
+                                mysqli_query($koneksi,"INSERT INTO tbl_njkb (jenis, merk, tahun, tipe, nilai_jual, njkb) 
                                 VALUES ('$tjenis_kdr', '$tmerk', '$tahun', '$ttipe', '$tnilai_jual', '$njkb')") or die(mysqli_error());
 
                                 ?><script type="text/javascript">alert('Data Berhasil ditambahkan!');
@@ -132,8 +132,8 @@ include "inc/koneksi.php";
                         }
 
                          ?>
-
-
+                      </div>
+                        <div>
                     </div>
                 </div>
 
@@ -162,7 +162,7 @@ include "inc/koneksi.php";
                 </thead>
                 <?php
                 	$no=1;
-                	$sql = mysqli_query($koneksi,"SELECT * FROM tb_njkb") or die(mysql_error());
+                	$sql = mysqli_query($koneksi,"SELECT * FROM tbl_njkb") or die(mysql_error());
                 	while ($data = mysqli_fetch_array ($sql)) {
                 ?>
                 <tbody>
@@ -184,7 +184,6 @@ include "inc/koneksi.php";
                 	}
                  ?>
             </table>
-
         </div>
     </div>
 </div>
