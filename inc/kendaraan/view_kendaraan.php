@@ -89,8 +89,8 @@ include "inc/koneksi.php";
                            <td><?php echo $data['no_mesin']; ?></td>
                            <td><?php echo $data['bahan_bakar']; ?></td>
                            <td><?php echo $data['warna_tnkb']; ?></td>
-                           <td><a href="?page=pemilik&action=ubah&id_knd=<?php echo $data['id_knd']; ?>"
-                                 type="submit" class="btn btn-sm     btn-primary" name="ubah"><i class="fa fa-edit"></i></a>
+                           <td><a href="?page=kendaraan&action=ubah&id_knd=<?php echo $data['id_knd']; ?>"
+                                 type="submit" class="btn btn-sm btn-primary" name="ubah"><i class="fa fa-edit"></i></a>
                               <a onclick="return confirm('Yakin akan menghapus data ini?')"
                                  href="?page=kendaraan&action=hapus&id_knd=<?php echo $data['id_knd'] ?>"
                                  type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
