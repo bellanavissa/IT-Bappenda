@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilkan Kendaraan</title>
+</head>
+<body>
+    <h1>Data Kendaraan</h1>
+    <div id="kendaraan-list"></div>
+
+    <script>
+        // Fungsi untuk mengambil data XML dari API
+        function loadKendaraan() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost/kendaraan/api_kendaraan.php', true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    const xml = this.responseXML;
+                    const kendaraanList = document.getElementById('kendaraan-list');
+                    let output = '<ul>';
+
+                    // Mengambil data dari XML
+                    const kendaraan = xml.getElementsByTagName('kendaraan');
+                    for (let i = 0; i < kendaraan.length; i++) {
+                        output += '<li>';
+                        output += 'Plat Nomor: ' + kendaraan[i].getElementsByTagName('nopol')[0].textContent + '<br>';
+                        output += 'Merk: ' + kendaraan[i].getElementsByTagName('merk')[0].textContent + '<br>';
+                        output += 'Tipe: ' + kendaraan[i].getElementsByTagName('tipe')[0].textContent + '<br>';
+                        output += 'Silinder: ' + kendaraan[i].getElementsByTagName('silinder')[0].textContent + '<br>';
+                        output += 'Warna: ' + kendaraan[i].getElementsByTagName('warna_kb')[0].textContent + '<br>';
+                        output += 'No. BPKB: ' + kendaraan[i].getElementsByTagName('no_bpkb')[0].textContent + '<br>';
+                        output += 'No. Rangka: ' + kendaraan[i].getElementsByTagName('no_rangka')[0].textContent + '<br>';
+                        output += 'No. Mesin: ' + kendaraan[i].getElementsByTagName('no_mesin')[0].textContent + '<br>';
+                        output += 'Bahan Bakar: ' + kendaraan[i].getElementsByTagName('bahan_bakar')[0].textContent + '<br>';
+                        output += 'Warna TNKB: ' + kendaraan[i].getElementsByTagName('warna_tnkb')[0].textContent + '<br>';
+                        output += '</li>';
+                    }
+                    output += '</ul>';
+                    kendaraanList.innerHTML = output;
+                }
+            };
+            xhr.send();
+        }
+
+        // Panggil fungsi untuk memuat data kendaraan
+        loadKendaraan();
+    </script>
+</body>
+</html>
