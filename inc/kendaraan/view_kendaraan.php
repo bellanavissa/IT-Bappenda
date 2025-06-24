@@ -66,6 +66,7 @@ include "inc/koneksi.php";
                               <th>No. Mesin</th>
                               <th>Bahan Bakar</th>
                               <th>Warna TNBK</th>
+                              <th>Aksi</th>
                            </tr>
                         </table>
                         </div>
