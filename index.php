@@ -145,6 +145,13 @@
                      } else if ($action == "tambah") {
                         include "inc/kendaraan/tambah_kendaraan.php";
                      }
+                     else if ($action == "ubah") {
+                        include "inc/kendaraan/ubah_kendaraan.php";
+                     }
+                     else if ($action == "hapus") {
+                        include "inc/kendaraan/hapus_kendaraan.php";
+                     }
+                     
                      
                   } else if ($page == "pemilik") {
                      if ($action == "") {
