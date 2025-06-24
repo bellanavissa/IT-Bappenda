@@ -162,7 +162,7 @@ include "inc/koneksi.php";
                 </thead>
                 <?php
                 	$no=1;
-                	$sql = mysqli_query($koneksi,"SELECT * FROM tb_njkb") or die(mysql_error());
+                	$sql = mysqli_query($koneksi,"SELECT * FROM tbl_njkb") or die(mysql_error());
                 	while ($data = mysqli_fetch_array ($sql)) {
                 ?>
                 <tbody>
